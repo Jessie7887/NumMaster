@@ -31,8 +31,6 @@ def Bguessing():    # nummy vs noob | comp vs human
                 if noob[i] == nummy[i]:
                     counter += 1    # number of correctly guessed digits
                     good_digits[i] == noob[i]
-                # else:
-                #     continue
 
             # if not all the numbers are right & you still have guesses
             if (counter < 8) and (counter != 0):
@@ -71,8 +69,7 @@ def EXguessing():
 
 # Play Again Option :)
 def play_again():
-    print(f'Want to take on a new challenge >:)?')
-    print("(enter yes or no)")
+    print(f'Want to take on a new challenge >:)  (enter yes or no)')
     go = input(">> ")
     if go == "yes":
         main.menu()

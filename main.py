@@ -8,6 +8,11 @@ import gametime as gt
 # expert -> 6 digits
 ###
 
+# Notes:
+# - may include validity checks: .isdigit, checklength
+# have pegs ?? to tell user how close they are
+# number of guesses should +1 the number of digits
+
 def menu():
     ## b, i, e === 1, 2, 3
     while True:
