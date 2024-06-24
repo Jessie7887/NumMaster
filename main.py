@@ -9,9 +9,10 @@ import gametime as gt
 ###
 
 # Notes:
-# - may include validity checks: .isdigit, checklength
+# validity checks: .isdigit, checklength [DONE]
 # have pegs ?? to tell user how close they are
 # number of guesses should +1 the number of digits
+# include a QUIT option if the user wants to give up
 
 def menu():
     ## b, i, e === 1, 2, 3
@@ -32,16 +33,14 @@ def menu():
             exit(0)
         else:
             print("You must select a difficulty to begin playing.")
-            quit = input("If you wish to exit, press X. or enter ok to select again.")
-            if quit == "ok":
-                continue
-            if quit == "X":
-                print(f'Play again soon! >:/')
-                exit(0)
-            else:
-                print("terminating")
-                exit(0)
-    
+            while True:
+                quit = input("If you wish to exit, press X. or enter ok to select again: ")
+                if quit == "ok":
+                    print(" ")
+                    break
+                if quit == "X":
+                    print(f'Play again soon! >:/')
+                    exit(0)
 
 
 # Main ~~~~~~~~~~~
